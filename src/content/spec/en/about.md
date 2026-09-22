@@ -22,7 +22,25 @@ Articles are Markdown files in nfuwari, with separate Chinese and English conten
 
 Astro generates static pages, and Fuwari provides the blog theme. KaTeX renders mathematics; Pagefind builds the search index. GitHub Pages hosts the generated files, while Alibaba Cloud ESA provides edge delivery and HTTPS for `blog.lucius7.cn`. Reading an article loads an already-built page.
 
-The language entry points are [/zh/](/zh/) and [/en/](/en/). Each has its own articles and search results; translations are written separately. The repository's [writing guide](https://github.com/xw7qwq/nfuwari/blob/main/docs/WRITING.md) and [deployment guide](https://github.com/xw7qwq/nfuwari/blob/main/docs/DEPLOYMENT.md) explain the workflow.
+The repository's [writing guide](https://github.com/xw7qwq/nfuwari/blob/main/docs/WRITING.md) and [deployment guide](https://github.com/xw7qwq/nfuwari/blob/main/docs/DEPLOYMENT.md) explain the workflow.
+
+## How the site chooses Chinese or English
+
+**The URL prefix determines the language, with Chinese as the default.** The site does not automatically choose a language based on your browser or IP address, and it does not remember your previous language selection.
+
+| Address | What opens |
+| --- | --- |
+| `blog.lucius7.cn/` | Always redirects to the Chinese home page, `/zh/` |
+| [/zh/](/zh/) | Chinese interface, articles, and search results |
+| [/en/](/en/) | English interface, articles, and search results |
+
+The **中文 / EN** buttons in the top navigation choose a destination based on the current page:
+
+- **Home, About, and archive:** open the equivalent page in the other language. For example, `/zh/about/` switches to `/en/about/`.
+- **Articles:** open the corresponding published translation when available; otherwise, open the target language's home page. Articles and translations are written separately.
+- **Pagination and filters:** switching languages returns to the target home or archive page without carrying over page numbers, categories, or tag filters.
+
+A language switch fully loads the destination page so that menus, sidebars, and search update together. Opening the root URL again still takes you to Chinese. Bookmark [/en/](/en/) to enter the English site directly. The legacy `/about/` and `/archive/` entry points also redirect to their Chinese counterparts.
 
 ## Where the changing information comes from
 
