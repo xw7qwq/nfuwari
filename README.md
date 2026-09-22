@@ -17,7 +17,7 @@ As of September 22, 2026, "Lucius7's Blog" has separate [Chinese](https://blog.l
 | Languages | Separate post directories, lists, category and tag counts, post navigation, RSS, and search |
 | Author | Lucius7 |
 | Avatar | QQ account `3012967200`, through Tencent's HTTPS avatar endpoint |
-| Site icon | `public/icon.svg`, an L7 wordmark |
+| Site icon | The same QQ avatar as the profile, configured through `siteConfig.favicon` |
 | Banner | Fuwari's default `src/assets/images/demo-banner.png`, centered and processed by Astro |
 | Writing | Markdown; new posts are drafts visible in local development |
 | Reading | Light and dark themes, categories, tags, Pagefind search, RSS, and sitemap |
@@ -124,7 +124,7 @@ See the [deployment guide](docs/DEPLOYMENT.md) for regular updates, failures, an
 | `.github/workflows/` | CI and GitHub Pages deployment |
 | `docs/` | Writing, math, deployment, and maintenance guides |
 
-`profileConfig.avatar` currently uses Tencent's endpoint directly: `https://q1.qlogo.cn/g?b=qq&nk=3012967200&s=640`. Changes to the QQ avatar appear once browser and endpoint caches refresh; no repository image replacement is needed.
+`profileConfig.avatar` and `siteConfig.favicon` share Tencent's avatar endpoint: `https://q1.qlogo.cn/g?b=qq&nk=3012967200&s=640`. The profile and browser tab icon both use the QQ avatar. Changes appear once browser and endpoint caches refresh; no repository image replacement is needed.
 
 Local profile and banner images use `assets/...` for paths relative to `src/`, or `/images/...` for files in `public/`. See [Images](docs/WRITING.md#images) for post cover and body image paths.
 
