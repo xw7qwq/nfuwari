@@ -9,7 +9,7 @@ Source for [blog.lucius7.cn](https://blog.lucius7.cn/), built with [Fuwari](http
 
 ## Current state
 
-As of September 22, 2026, "Lucius7's Blog" has separate [Chinese](https://blog.lucius7.cn/zh/) and [English](https://blog.lucius7.cn/en/) entry points. The first Chinese article, [SCC condensation and topological sorting](https://blog.lucius7.cn/zh/posts/summer26-1-scc/), is published; the English post directory is still empty. Template posts and default profile details have been removed. Fuwari's default banner image is enabled; other template images remain removed. Posts from the previous AstroPaper blog have not yet been migrated.
+As of September 22, 2026, "Lucius7's Blog" has separate [Chinese](https://blog.lucius7.cn/zh/) and [English](https://blog.lucius7.cn/en/) entry points. Published Chinese articles include [SCC condensation and topological sorting](https://blog.lucius7.cn/zh/posts/summer26-1-scc/) and a [2026 progress record covering algorithm training, self-hosted services, open-source contributions, and competitions](https://blog.lucius7.cn/zh/posts/2026-september-lab-notes/); the English post directory is still empty. Template posts and default profile details have been removed. Fuwari's default banner image is enabled; other template images remain removed. Posts from the previous AstroPaper blog have not yet been migrated.
 
 | Item | Configuration |
 | --- | --- |

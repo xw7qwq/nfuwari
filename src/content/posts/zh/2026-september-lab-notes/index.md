@@ -5,7 +5,7 @@ description: '记录 2026 年 1 月 1 日至 9 月 22 日的算法训练、比�
 image: ''
 tags: [个人记录, 算法竞赛, 自建服务, 开源, VPS]
 category: '折腾记录'
-draft: true
+draft: false
 lang: zh_CN
 ---
 
@@ -87,6 +87,8 @@ OJFlare 的贡献图按 UTC+8 统计每道题的首次 AC；CodeFlare 保存的�
 
 这些服务大多基于已有开源项目。我做的事情主要是部署、配置，以及围绕自己的使用需求修改接口和界面。
 
+平时也会在 NodeSeek、LINUX DO 逛逛，看社区里的讨论。
+
 ### DMOJ：从提交代码到维护评测环境
 
 和算法训练关系最紧密的是 [DMOJ](https://github.com/DMOJ/site)。这套部署包含网页、后台任务、通信桥、评测机、数据库和缓存，另有 PDF 服务与 HDU 特殊评测适配服务。
@@ -124,7 +126,7 @@ NeXus / Xboard 这一组服务则包含前端、同源中间层和既有后端�
 | 运维入口 | Nexterm |
 | 消息通知 | Apprise |
 | 订阅、文件与搜索 | RSSHub、Browserless、OpenList、Meilisearch、TaoSync |
-| 日常管理与后台任务 | Wallos、qBittorrent、PT Tools、seed guard |
+| 日常管理与后台任务 | Wallos、qBittorrent、PT Tools（主要配合 OpenCD 使用）、seed guard |
 | 课程信息与工作流实验 | yuketang-cloud |
 | 进程与部署管理 | systemd、Supervisor、Docker Compose |
 
