@@ -1,10 +1,42 @@
 # About
 
-I'm [Lucius7](https://github.com/theLucius7). I write about algorithms, reflect on problems I've solved, and document my personal projects. These notes help me return to an idea and understand how I reached it.
+I'm [Lucius7](https://github.com/theLucius7). I enjoy algorithms, private trackers, and self-hosting. I write about problems I've solved, tools I've customized, and lessons from maintaining my own services. These notes help me return to an idea and understand how I reached it.
+
+## Interests and technical focus
+
+I like improving the tools I use for algorithm practice, OpenCD, email, and data dashboards. Repetitive tasks and rough edges often turn into small tools. Using private trackers also gives me practical reasons to improve account synchronization, capacity management, and seeding maintenance.
+
+My projects focus on **backend development, API integration, and automation**, using Python, Go, and JavaScript / TypeScript. I also customize frontends and maintain deployments with Linux, Docker Compose, Caddy, and systemd. I care about consistent state, recovery from failures, and checking that a change does what it is supposed to do.
+
+## Projects I work on
+
+Most of these projects build on open-source software, adapted to my own needs. The descriptions below focus on the parts I maintain and customize.
+
+### Algorithm practice and judging: DMOJ
+
+I use DMOJ as the foundation for an algorithm practice environment, working on contest imports, checker compatibility, rankings at equal elapsed contest time, and access to restricted attachments. Integrating Windows special judges has also involved Wine, Unix sockets, and a separate container. This connects algorithm practice with data preparation, backend logic, and deployment work.
+
+### Private trackers, OpenCD, and seeding maintenance
+
+I enjoy using private trackers (PT), and currently use OpenCD. For everyday seeding and resource management, I have customized workflows around PT Tools and qBittorrent: refreshing account information without an open browser, rechecking actual size and capacity before admitting tasks, and using a Python guard to check task completion, file availability, and tracker acknowledgement.
+
+These changes have led me to spend more time on concurrent tasks, state synchronization, and failure handling. I separate key decisions into logic that can be tested with mock APIs, making the tools easier to inspect and maintain.
+
+### Network service portal: NeXus
+
+I customize a personal network service portal based on open-source projects including EZ-Theme and Xboard. The work spans Vue pages, a Go same-origin backend, traffic statistics, and client configuration compatibility. Frontend changes include lazy loading, sharing in-flight read requests, and handling asynchronous responses after login state changes.
+
+### Email and authentication: Bulwark / Stalwart
+
+For email across multiple domains, I customize filing rules, folder maintenance, and Passkey login integration. This involves JMAP, Sieve, WebAuthn, and TypeScript, with attention to credential revocation, changing state, and failed requests.
+
+### Data synchronization and presentation: Fitbaus
+
+I extend an existing Fitbit dashboard with caching, daily/weekly/monthly summaries, scheduled synchronization, a Chinese interface, and JSON API / SVG output. I enjoy connecting data preparation to a usable interface, including the details of overlapping sync jobs, cache invalidation, and access controls for administrative actions.
+
+## Projects behind this blog
 
 The blog and its supporting projects live in the [xw7qwq](https://github.com/xw7qwq) organization. Articles, source code, solving history, and device activity have their own sources and meet here on the blog.
-
-## The projects
 
 | Project | Purpose | Role on this site |
 | --- | --- | --- |
