@@ -9,7 +9,7 @@ Source for [blog.lucius7.cn](https://blog.lucius7.cn/), built with [Fuwari](http
 
 ## Current state
 
-As of September 9, 2026, "Lucius7's Blog" has separate [Chinese](https://blog.lucius7.cn/zh/) and [English](https://blog.lucius7.cn/en/) entry points. Template posts and default profile details have been removed. Fuwari's default banner image is enabled; other template images remain removed. The post directories start empty; each home page shows an empty state until a public post is added. Posts from the previous AstroPaper blog have not yet been migrated.
+As of September 22, 2026, "Lucius7's Blog" has separate [Chinese](https://blog.lucius7.cn/zh/) and [English](https://blog.lucius7.cn/en/) entry points. The first Chinese article, [SCC condensation and topological sorting](https://blog.lucius7.cn/zh/posts/summer26-1-scc/), is published; the English post directory is still empty. Template posts and default profile details have been removed. Fuwari's default banner image is enabled; other template images remain removed. Posts from the previous AstroPaper blog have not yet been migrated.
 
 | Item | Configuration |
 | --- | --- |
@@ -24,7 +24,7 @@ As of September 9, 2026, "Lucius7's Blog" has separate [Chinese](https://blog.lu
 | Math | `remark-math` + `rehype-katex`; styles and fonts ship with the site |
 | Social links | GitHub, X, Bilibili, and email (`i@lucius7.dev`) |
 | Recent submissions | Latest three accepted Codeforces/AtCoder submissions from OJFlare, with platform icons and direct submission links |
-| About | AC contribution calendar with year and platform filters, using OJFlare's first-acceptance statistics |
+| About | Chinese/English project overview and publishing/API data flows, followed by the OJFlare AC contribution calendar |
 | Footer registration | [ICP registration](https://beian.miit.gov.cn/), preserved in the site footer |
 | Publishing | Style checks, type checks, build, and deployment on updates to `main` |
 
