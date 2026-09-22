@@ -1,3 +1,52 @@
 # About
 
-This is [Lucius7](https://github.com/theLucius7)’s personal blog.
+I'm [Lucius7](https://github.com/theLucius7). I write about algorithms, reflect on problems I've solved, and document my personal projects. These notes help me return to an idea and understand how I reached it.
+
+The blog and its supporting projects live in the [xw7qwq](https://github.com/xw7qwq) organization. Articles, source code, solving history, and device activity have their own sources and meet here on the blog.
+
+## The projects
+
+| Project | Purpose | Role on this site |
+| --- | --- | --- |
+| [nfuwari](https://github.com/xw7qwq/nfuwari) | An Astro / Fuwari blog | Stores articles, builds pages, and integrates the public APIs described below |
+| [MacFlare](https://github.com/xw7qwq/macflare) | Publishes Mac application and music activity | Supplies the app icon and track artwork in the top navigation |
+| [OJFlare](https://github.com/xw7qwq/ojflare) | Collects submissions, contest progress, and ratings | Supplies recent submissions and this page's AC contribution calendar |
+| [CodeFlare](https://github.com/xw7qwq/codeflare) | Archives solutions, templates, and submission records | Provides a separate searchable source browser for reference when writing and reviewing solutions |
+| [.github](https://github.com/xw7qwq/.github) | Organization profile and shared guidelines | Documents how the repositories are maintained |
+
+## How an article reaches you
+
+Articles are Markdown files in nfuwari, with separate Chinese and English content. I preview drafts locally, submit the changes to GitHub, and merge them into `main` after checks pass. GitHub Actions then builds and publishes the site.
+
+**Markdown → Astro build → GitHub Pages → Alibaba Cloud ESA → your browser**
+
+Astro generates static pages, and Fuwari provides the blog theme. KaTeX renders mathematics; Pagefind builds the search index. GitHub Pages hosts the generated files, while Alibaba Cloud ESA provides edge delivery and HTTPS for `blog.lucius7.cn`. Reading an article loads an already-built page.
+
+The language entry points are [/zh/](/zh/) and [/en/](/en/). Each has its own articles and search results; translations are written separately. The repository's [writing guide](https://github.com/xw7qwq/nfuwari/blob/main/docs/WRITING.md) and [deployment guide](https://github.com/xw7qwq/nfuwari/blob/main/docs/DEPLOYMENT.md) explain the workflow.
+
+## Where the changing information comes from
+
+### Applications and music: MacFlare
+
+A native collector on my Mac records application and Apple Music activity. It sends authenticated updates to a Cloudflare Worker, with state stored in Workers KV. The blog reads the public [`/api/now`](https://macflare.lucius7.dev/api/now) and [`/api/icons`](https://macflare.lucius7.dev/api/icons) endpoints in your browser. An app icon appears beside the site title, along with track artwork when music is playing. Hover, focus, or tap an icon to see its name.
+
+These are the most recently published activity snapshots. The icons update from the API and disappear when the state expires or becomes unavailable. API and integration documentation is available at [MacFlare](https://macflare.lucius7.dev/).
+
+### Recent submissions and AC contributions: OJFlare
+
+OJFlare sync jobs collect solving records from Codeforces, AtCoder, QOJ, and Nowcoder, then publish [`dashboard.json`](https://ojflare.lucius7.dev/data/dashboard.json). The blog presents two views of that data:
+
+- **Recent submissions in the sidebar** show the latest three accepted Codeforces / AtCoder submissions, with direct links to the original submission pages. Repeat ACs on the same problem can appear separately.
+- **The AC contribution calendar below** counts each problem on its earliest recorded AC date in UTC+8, based on the collected history. Each problem counts only once. You can filter by year and platform.
+
+Both widgets share a data request and refresh periodically while the page is visible. Freshness depends on OJFlare's sync and publication schedule; see its [API documentation](https://github.com/xw7qwq/ojflare/blob/main/docs/API.md). The public APIs are read after the page loads, so building and reading articles does not depend on those services being available at that moment.
+
+### From submission records to source code: CodeFlare
+
+[CodeFlare](https://codeflare.lucius7.dev/) organizes code by platform and directory, with search and an online source reader. Its archive tools can use OJFlare's problem, contest, and AC metadata to help organize imports, then supplement submission records and source code from available sources.
+
+Source archives and AC statistics are maintained separately. The archive also includes templates, unfinished code, and unsuccessful attempts, so its file count is not a solved-problem count. I write the blog's explanations myself and use links to connect them with the code archive. The data APIs directly integrated into this site currently come from MacFlare and OJFlare.
+
+## Get in touch
+
+You can find me on [GitHub](https://github.com/theLucius7), [Bilibili](https://space.bilibili.com/1814052279), and [X](https://x.com/theLucius7), or email [i@lucius7.dev](mailto:i@lucius7.dev). For website or project issues, please use the relevant repository's Issues page.
