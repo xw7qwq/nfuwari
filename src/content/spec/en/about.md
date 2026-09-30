@@ -1,5 +1,9 @@
 # About
 
+## Preface
+
+> This page was published by AI and is awaiting revision and polishing.
+
 I'm [Lucius7](https://github.com/theLucius7). I enjoy algorithms, private trackers, and self-hosting. I write about problems I've solved, tools I've customized, and lessons from maintaining my own services. These notes help me return to an idea and understand how I reached it.
 
 ## Interests and technical focus
